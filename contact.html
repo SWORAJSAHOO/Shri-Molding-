@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shri Molding | Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="container nav-wrap">
+    <div class="logo">Shri <span>Molding</span></div>
+    <nav>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero fade-up">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>
+        Share your drawings or ideas and our team will respond with feasibility, tooling, and molding guidance.
+      </p>
+    </div>
+  </section>
+
+  <section class="section fade-up">
+    <div class="container contact-grid">
+      <!-- Update YOUR_EMAIL_HERE and username in _next URL -->
+      <form action="https://formsubmit.co/sahoosworaj6@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from Shri Molding website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://sworajsahoo.github.io/shri-molding/thank-you.html">
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required />
+
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" placeholder="Organization / Brand" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="+91-" />
+
+        <label for="service">Interested In</label>
+        <select id="service" name="service">
+          <option>Injection molding</option>
+          <option>Tooling & mould development</option>
+          <option>Allied / value‑added services</option>
+          <option>End‑to‑end project support</option>
+        </select>
+
+        <label for="message">Project Details</label>
+        <textarea id="message" name="message" placeholder="Briefly describe part type, material, quantity, and expected timeline." ></textarea>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div class="contact-panel">
+        <p><strong>Shri Molding</strong></p>
+        <p>Address: Industrial Area, City, State, India</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>Email: sales@shrimolding.com</p>
+        <p>Working hours: Monday–Saturday, 9:30 AM – 6:30 PM</p>
+        <p style="margin-top:8px; font-size:0.85rem;">
+          For faster review, include 2D/3D drawings or photos when you send an email so engineering can check feasibility quickly.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Shri Molding. All rights reserved.</p>
+    <p>Contact · Enquiries · Vendor Partnerships</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
