@@ -36,34 +36,56 @@
 
   <section class="section fade-up">
     <div class="container contact-grid">
-      <!-- Update YOUR_EMAIL_HERE and username in _next URL -->
-      <form action="https://formsubmit.co/sahoosworaj6@gmail.com" method="POST">
+
+      <!--
+        FIXED CONTACT FORM
+        - Correct _next must be an absolute URL to your GitHub Pages thank-you page.
+        - If your GitHub username or repo name differ, update the _next value accordingly.
+        - Optional file upload is enabled (enctype) to attach drawings/photos.
+      -->
+
+      <form action="https://formsubmit.co/sahoosworaj6@gmail.com" method="POST" enctype="multipart/form-data">
+        <!-- Formsubmit settings -->
         <input type="hidden" name="_subject" value="New enquiry from Shri Molding website">
         <input type="hidden" name="_captcha" value="false">
+        <!-- IMPORTANT: replace the URL below with your exact GitHub Pages URL if different -->
         <input type="hidden" name="_next" value="https://sworajsahoo.github.io/shri-molding/thank-you.html">
+        <input type="hidden" name="_template" value="table">
 
+        <!-- basic fields -->
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your full name" required />
+        <input id="name" name="name" type="text" placeholder="Your full name" required aria-required="true" />
 
         <label for="company">Company</label>
         <input id="company" name="company" type="text" placeholder="Organization / Brand" />
 
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        <input id="email" name="email" type="email" placeholder="you@example.com" required aria-required="true" />
 
         <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" placeholder="+91-" />
+        <!-- Indian phone pattern (optional) -->
+        <input id="phone" name="phone" type="tel" placeholder="+91-XXXXXXXXXX" pattern="^\+?[0-9\-\s]{7,20}$" />
 
         <label for="service">Interested In</label>
-        <select id="service" name="service">
-          <option>Injection molding</option>
-          <option>Tooling & mould development</option>
-          <option>Allied / value‑added services</option>
-          <option>End‑to‑end project support</option>
+        <select id="service" name="service" required>
+          <option value="Injection molding">Injection molding</option>
+          <option value="Tooling & mould development">Tooling & mould development</option>
+          <option value="Allied / value-added services">Allied / value-added services</option>
+          <option value="End-to-end project support">End-to-end project support</option>
         </select>
 
         <label for="message">Project Details</label>
-        <textarea id="message" name="message" placeholder="Briefly describe part type, material, quantity, and expected timeline." ></textarea>
+        <textarea id="message" name="message" placeholder="Briefly describe part type, material, quantity, and expected timeline."></textarea>
+
+        <!-- Optional file upload for drawings / photos -->
+        <label for="attachment">Attach drawings or photos (optional)</label>
+        <input id="attachment" name="attachment" type="file" accept="image/*,.pdf,.step,.stp,.iges,.igs,.sldprt,.zip" />
+
+        <!-- simple honeypot to reduce spam (hide with CSS) -->
+        <div style="display:none;">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" />
+        </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
